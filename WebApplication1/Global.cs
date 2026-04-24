@@ -1,0 +1,23 @@
+﻿global using Domain.Contracts;
+global using Microsoft.EntityFrameworkCore;
+global using Presistance.Data.DataSeeding.DataInitializer;
+global using Presistance.Data.DBContext;
+global using  Domain.Contracts.UnitOfWork;
+global using E_CommerceWeb.Extensions;
+global using Presistance.UnitOfWork;
+global using Services.MappingProfiles;
+global using Services_Abstractions.Contracts;
+global using Domain.Exceptions;
+global using Shared.ErrorModels;
+global using E_CommerceWeb.Factories;
+global using E_CommerceWeb.MiddleWare;
+global using Microsoft.AspNetCore.Mvc;
+global using Domain.Contracts.GenericRepository;
+global using Presistance.Repositries;
+global using Domain.Entities.IdentityModule;
+global using Microsoft.AspNetCore.Identity;
+global using Presistance.Identity;
+global using StackExchange.Redis;
+global using Services.ServicesImplementations.ServicesManager;
+global using Shared.Common;
+

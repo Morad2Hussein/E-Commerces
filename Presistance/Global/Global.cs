@@ -1,0 +1,10 @@
+﻿global using Domain.Entities.ProductModule;
+global using Microsoft.EntityFrameworkCore;
+global using Domain.Contracts;
+global using Domain.Entities;
+global using Presistance.Data.DBContext;
+global using Domain.Contracts.GenericRepository;
+global using Domain.Contracts.UnitOfWork;
+global using Presistance.Repositries;
+global using Domain.Entities.BasketModule;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
