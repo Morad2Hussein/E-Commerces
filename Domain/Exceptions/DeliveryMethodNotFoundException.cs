@@ -2,7 +2,10 @@
 
 namespace Domain.Exceptions
 {
-    public class DeliveryMethodNotFoundException(int id) : NotFoundException($"Delivery method with id {id} not found.")
+    public sealed class DeliveryMethodNotFoundException : NotFoundException
     {
+        public DeliveryMethodNotFoundException(int id) : base($"Delivery method with id {id} not found.")
+        {
+        }
     }
 }

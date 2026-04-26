@@ -18,7 +18,7 @@ namespace Services.ServicesImplementations.ServicesManager
         private readonly Lazy<IBasketServices> _basketServices =
                  new Lazy<IBasketServices>(() => new BasketServices(_basketRepository, _mapper));
         private readonly Lazy<IAuthenticationService> _authenticationService =
-            new Lazy<IAuthenticationService>(() => new AuthenticationService(_userManager, _options)); 
+            new Lazy<IAuthenticationService>(() => new AuthenticationService(_userManager, _options, _mapper)); 
         private readonly Lazy<IOrderServices> _orderServices =
             new Lazy<IOrderServices>(() => new OrderServices(_unitOfWork,  _basketRepository , _mapper));
         #endregion

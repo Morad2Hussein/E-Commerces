@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Presistance.Identity;
 
@@ -11,9 +12,11 @@ using Presistance.Identity;
 namespace Presistance.Identity.Migrations
 {
     [DbContext(typeof(IdentityStoreDbContext))]
-    partial class IdentityStoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260425085821_UpdateAddressTable")]
+    partial class UpdateAddressTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
