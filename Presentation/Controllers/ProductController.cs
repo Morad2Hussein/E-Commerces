@@ -1,11 +1,15 @@
 ﻿
 
+using Presentation.Attributes;
+
 namespace Presentation.Controllers
 {
     
-    public class ProductController(IServicesManager _servicesManager) : ApiController
+    public class ProductsController(IServicesManager _servicesManager) : ApiController
     {
         #region Get All Products
+        [RedisCache]
+        
         [HttpGet]
         public async Task<ActionResult<PaginatedResult<ProductResultDto>>>  GetAllProducts([FromQuery]ProductQueryParams queryParams)
         {

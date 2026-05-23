@@ -25,3 +25,6 @@ global using Services_Abstractions.Contracts.OrderServices;
 global using Shared.Common;
 global using Domain.Entities.OrderModule;
 global using Shared.DTOS.OrderDTOS;
+global using Microsoft.Extensions.Configuration;
+global using Services.ServicesImplementations.PaymentServicesImplementations;
+global using Services_Abstractions.Contracts.PaymentServices;

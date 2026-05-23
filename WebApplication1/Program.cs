@@ -10,7 +10,7 @@ namespace WebApplication1
 
 
             #region Services
-            builder.Services.AddWepServices();
+            builder.Services.AddWepServices(builder.Configuration);
             builder.Services.AddInfrastructure(builder.Configuration);
             builder.Services.AddCoreServices(builder.Configuration);
             #endregion
@@ -22,21 +22,16 @@ namespace WebApplication1
             await app.SeedingDatabaseAsync();
             // Global Exception Handling MiddleWare
             app.AddExceptionsHandleMiddleWares();
-
-
             if (app.Environment.IsDevelopment())
             {
                 app.AddSwaggerMiddleWares();
             }
-
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseCors("CorsPolicy");
             app.UseAuthentication();
             app.UseAuthorization();
-
-
             app.MapControllers();
-
             await app.RunAsync(); 
             #endregion
         }

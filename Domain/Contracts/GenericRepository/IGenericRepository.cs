@@ -10,6 +10,8 @@ namespace Domain.Contracts.GenericRepository
         #region specifications
         Task<IEnumerable<TEntity>> GetAllAsync(ISpecifications<TEntity, TKey> specifications);
         Task<TEntity?> GetByIdAsync(TKey id, ISpecifications<TEntity, TKey> specifications);
+        Task<TEntity?> GetByIdAsync(ISpecifications<TEntity, TKey> specifications);
+
         Task<int> CountAsync(ISpecifications<TEntity, TKey> specifications);
         #endregion
         Task AddAsync(TEntity entity);

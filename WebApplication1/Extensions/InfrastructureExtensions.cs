@@ -31,6 +31,7 @@ namespace E_CommerceWeb.Extensions
             services.AddScoped<IDataInitializer, DataInitializer>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IBasketRepository, BasketRepository>();
+            services.AddScoped<ICacheRepository,CacheRepository>();
             services.AddIdentity<User, IdentityRole>(
                 option =>
                 {
@@ -64,9 +65,9 @@ namespace E_CommerceWeb.Extensions
                             ValidateAudience = true,
                             ValidateLifetime = true,
                             ValidateIssuerSigningKey = true,
-                            ValidIssuer = JwtOptions.Issuer,
-                            ValidAudience = JwtOptions.Audience,
-                            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtOptions.SecretKey))
+                            ValidIssuer = JwtOptions!.Issuer,
+                            ValidAudience = JwtOptions!.Audience,
+                            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtOptions!.SecretKey))
                         };
                     }
                     );

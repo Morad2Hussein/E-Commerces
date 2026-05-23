@@ -7,6 +7,9 @@ global using Shared.DTOS.IdentityDTOS;
 global using Services_Abstractions.Contracts.Authentication;
 global using Shared.DTOS.OrderDTOS;
 global using Services_Abstractions.Contracts.OrderServices;
+global using Services_Abstractions.Contracts.PaymentServices;
+global using Services_Abstractions.Contracts.CacheSerices;
+
 
 
 

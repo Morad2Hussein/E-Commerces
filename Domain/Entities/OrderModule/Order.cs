@@ -4,7 +4,9 @@ namespace Domain.Entities.OrderModule
     public class Order : BaseEntity<Guid>
     {
         public Order() { }
-        public Order(string userName, ShippingAddress shippingAddress, ICollection<OrderItem> orderItems, DeliveryMethod deliveryMethod, decimal subtotal)
+        public Order(
+            string userName, ShippingAddress shippingAddress, ICollection<OrderItem> orderItems, 
+            DeliveryMethod deliveryMethod, decimal subtotal, string paymentIntentId)
         {
             Id = Guid.NewGuid();
             UserName = userName;
@@ -12,6 +14,7 @@ namespace Domain.Entities.OrderModule
             OrderItems = orderItems;
             DeliveryMethod = deliveryMethod;
             Subtotal = subtotal;
+            PaymentIntentId = paymentIntentId;
         }
 
         public string UserName { get; set; } = string.Empty;

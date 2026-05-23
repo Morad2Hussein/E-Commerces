@@ -32,6 +32,8 @@ namespace Presistance.Repositries
 
         public async Task<TEntity?> GetByIdAsync(TKey id, ISpecifications<TEntity, TKey> specifications)
             => await SpecificationEvaluator.CreateQuery(_dbContext.Set<TEntity>(), specifications).FirstOrDefaultAsync();
+        public async Task<TEntity?> GetByIdAsync(ISpecifications<TEntity, TKey> specifications)
+    => await SpecificationEvaluator.CreateQuery(_dbContext.Set<TEntity>(), specifications).FirstOrDefaultAsync();
         #endregion
         #region Add 
         public async Task AddAsync(TEntity entity)

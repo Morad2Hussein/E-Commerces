@@ -9,9 +9,7 @@
 
             // Single map with explicit member bindings — no duplicate CreateMap
             CreateMap<CustomerBasket, BasketDTO>()
-                .ForMember(dest => dest.BasketItemDTO, opt => opt.MapFrom(src => src.Items))
-                .ReverseMap()
-                .ForMember(dest => dest.Items, opt => opt.MapFrom(src => src.BasketItemDTO));
+                .ReverseMap();
         }
     }
 }

@@ -4,7 +4,7 @@ using ShippingAddress = Domain.Entities.OrderModule.Address;
 
 namespace Services.ServicesImplementations.OrderImplementations
 {
-    internal class OrderServices(
+    public class OrderServices(
         IUnitOfWork _unitOfWork, IBasketRepository _basketRepository, IMapper _mapper) : IOrderServices
 
     {
@@ -38,9 +38,10 @@ namespace Services.ServicesImplementations.OrderImplementations
         #region CreateOrderAsync
         public async Task<OrderResult> CreateOrderAsync(OrderRequest order, string useremail)
         {
+            var orderRepo= _unitOfWork.GetRepository<Order, Guid>();
 
             // Mapping from AddressDto to shipping address in OrderResult
-            var shippingAddress = _mapper.Map<ShippingAddress>(order.ShippingAddress);
+            var shippingAddress = _mapper.Map<ShippingAddress>(order.ShipToAddress);
             // [OrderItems] => Basket [BasketId] => BasketItems => OrderItems
             #region create Order Items
             var basket =
@@ -58,12 +59,20 @@ namespace Services.ServicesImplementations.OrderImplementations
             var deliveryMethod =
                 await _unitOfWork.GetRepository<DeliveryMethod, int>().GetByIdAsync(order.DeliveryMethodId) ??
                 throw new DeliveryMethodNotFoundException(order.DeliveryMethodId);
+            OrderWithPaymentIntentSpecifications? spec = new OrderWithPaymentIntentSpecifications(basket.PaymentIntentId!);
+            // Check if Order with the same PaymentIntentId exists => If exists => Delete it and create new one
+            var existingOrder = await orderRepo.GetByIdAsync(spec);
+            if(existingOrder != null)
+            {
+                orderRepo.Delete(existingOrder);
+            }
+
             //  Calculate Subtotal => OrderItems => Price * Quantity
             var subtotal = orderItems.Sum(item => item.Price * item.Quantity);
             // Create Order => Add to DB => Return OrderResult DTO
-            var newOrder = new Order(useremail, shippingAddress, orderItems,  deliveryMethod, subtotal );
+            var newOrder = new Order(useremail, shippingAddress, orderItems,  deliveryMethod, subtotal, basket.PaymentIntentId !);
             // save to DB
-            await _unitOfWork.GetRepository<Order, Guid>().AddAsync(newOrder);
+            await orderRepo.AddAsync(newOrder);
             await _unitOfWork.SaveChangesAsync();
 
                 return _mapper.Map<OrderResult>(newOrder);
@@ -84,3 +93,4 @@ namespace Services.ServicesImplementations.OrderImplementations
 
     }
 }
+ 
