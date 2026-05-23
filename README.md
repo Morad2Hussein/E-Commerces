@@ -17,7 +17,6 @@
     ✅Generic Response Wrappers: Standardized API responses for consistency and easier frontend integration.
     ✅DTO Mapping: Strict separation between domain entities and exposed API contracts using AutoMapper.
 🛠️ Tech Stack
-
     | Layer                    | Technology            |
     | :----------------------- | :-------------------- |
     | **Framework**            | ASP.NET Core Web API  |
