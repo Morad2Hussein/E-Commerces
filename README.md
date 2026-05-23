@@ -45,12 +45,14 @@ This project goes beyond basic CRUD operations and implements enterprise-level b
       ✅ Specification-based Querying
       ✅ Scalable Modular Architecture
 ⚡ Performance Optimization
+
      This project integrates Redis Caching to enhance performance by:
      ✅Reducing repetitive database queries
      ✅Improving frequently accessed endpoint response times
      ✅Supporting scalable distributed caching
      ✅Enhancing overall API throughput
   📁 Project Structure
+  
     E-Commerce/
     ├── 📂 API                     # Presentation Layer (Controllers, Middleware)
     ├── 📂 Core                    # Domain Entities & Interfaces
@@ -64,6 +66,7 @@ This project goes beyond basic CRUD operations and implements enterprise-level b
     └── 📂 Cache                   # Redis Caching Implementation
   
 🔐 Security Features
+
     ✅JWT-based authentication
     ✅Role-based authorization
     ✅Protected API endpoints
@@ -71,27 +74,32 @@ This project goes beyond basic CRUD operations and implements enterprise-level b
     ✅Token validation middleware
 📡 API Capabilities
 Product Operations
+
     ✅Retrieve all products
     ✅Get product details
     ✅Filter by category / brand
     ✅Search products
     ✅Pagination support
 Basket Operations
+
     ✅Create shopping basket
     ✅Update basket items
     ✅Remove products
     ✅Persist basket using Redis
 Order Management
+
     ✅Create orders
     ✅Retrieve user orders
     ✅Track order history
 Authentication
+
     ✅User registration
     ✅Secure login
     ✅Token generation
     ✅Protected resource access
 🎯 Backend Concepts Demonstrated
 This project showcases strong understanding of:
+
     ✅RESTful API Design
     ✅Dependency Injection
     ✅Caching Strategies
@@ -101,8 +109,10 @@ This project showcases strong understanding of:
     ✅Asynchronous Programming
     ✅Scalable Application Design
 Why This Project?
+
     This project was built to demonstrate practical implementation of modern backend development practices using ASP.NET Core, focusing on building scalable, maintainable,
     and high-performance APIs suitable for real-world e-commerce systems.
 Author
+
     Morad Hussein  
     Junior Backend Developer 
