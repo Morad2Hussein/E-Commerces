@@ -17,19 +17,19 @@
     ✅Generic Response Wrappers: Standardized API responses for consistency and easier frontend integration.
     ✅DTO Mapping: Strict separation between domain entities and exposed API contracts using AutoMapper.
 🛠️ Tech Stack
-    | Layer                    | Technology            |
-    | :----------------------- | :-------------------- |
-    | **Framework**            | ASP.NET Core Web API  |
-    | **Language**             | C#                    |
-    | **Architecture**         | Clean Architecture    |
-    | **ORM**                  | Entity Framework Core |
-    | **Database**             | Microsoft SQL Server  |
-    | **Caching**              | Redis                 |
-    | **Authentication**       | JWT Bearer Tokens     |
-    | **Object Mapping**       | AutoMapper            |
-    | **API Documentation**    | Swagger / OpenAPI     |
-    | **Validation**           | Fluent Validation     |
-    | **Dependency Injection** | Built-in .NET DI      |
+    | Layer | Technology |
+    | :--- | :--- |
+    | **Framework** | ASP.NET Core Web API|
+    | **Language**  | C# |
+    | **Architecture** | Clean Architecture |
+    | **ORM** | Entity Framework Core |
+    | **Database** | Microsoft SQL Server|
+    | **Caching**  | Redis|
+    | **Authentication**| JWT Bearer Tokens|
+    | **Object Mapping**| AutoMapper|
+    | **API Documentation** | Swagger / OpenAPI |
+    | **Validation** | Fluent Validation|
+    | **Dependency Injection** | Built-in .NET DI |
 
 🚀 Key Features
       
