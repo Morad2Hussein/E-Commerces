@@ -1,13 +1,14 @@
 🛒 E-Commerce API
 
- Advanced ASP.NET Core Web API Implementation | Clean Architecture & Caching
- A scalable E-Commerce backend solution built using modern ASP.NET Core practices with a strong focus on clean separation of concerns, performance optimization, and maintainability.
- This project demonstrates real-world backend engineering concepts including Repository Pattern, Specification Pattern, Redis Caching, and JWT Authentication, making it a strong
- showcase  of production-ready .NET architecture.
+    Advanced ASP.NET Core Web API Implementation | Clean Architecture & Caching
+    A scalable E-Commerce backend solution built using modern ASP.NET Core practices with a strong focus on clean separation of concerns, performance optimization, and maintainability.
+    This project demonstrates real-world backend engineering concepts including Repository Pattern, Specification Pattern, Redis Caching, and JWT Authentication, making it a strong
+    showcase  of production-ready .NET architecture.
 
 🏗 Architectural Highlights
 
 This project goes beyond basic CRUD operations and implements enterprise-level backend design principles:
+
     ✅Clean Architecture: Organized into distinct layers to ensure separation of responsibilities and improve scalability.
     ✅Repository Pattern: Abstracts database access logic for maintainable and testable data operations.
     ✅Unit of Work Pattern: Coordinates transactional consistency across multiple repositories.
