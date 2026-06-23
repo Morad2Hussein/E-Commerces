@@ -1,11 +1,11 @@
-🛒 E-Commerce API
+ E-Commerce API
 
     Advanced ASP.NET Core Web API Implementation | Clean Architecture & Caching
     A scalable E-Commerce backend solution built using modern ASP.NET Core practices with a strong focus on clean separation of concerns, performance optimization, and maintainability.
     This project demonstrates real-world backend engineering concepts including Repository Pattern, Specification Pattern, Redis Caching, and JWT Authentication, making it a strong
     showcase  of production-ready .NET architecture.
 
-🏗 Architectural Highlights
+Architectural Highlights
 
 This project goes beyond basic CRUD operations and implements enterprise-level backend design principles:
 
@@ -17,7 +17,7 @@ This project goes beyond basic CRUD operations and implements enterprise-level b
     ✅JWT Authentication & Authorization: Secure token-based authentication for protected endpoints.
     ✅Generic Response Wrappers: Standardized API responses for consistency and easier frontend integration.
     ✅DTO Mapping: Strict separation between domain entities and exposed API contracts using AutoMapper.
-🛠️ Tech Stack
+Tech Stack
 
   | Layer                    | Technology            |
 | ------------------------ | --------------------- |
@@ -34,7 +34,7 @@ This project goes beyond basic CRUD operations and implements enterprise-level b
 | **Dependency Injection** | Built-in .NET DI      |
 
 
-🚀 Key Features
+ Key Features
       ✅ Product Catalog Management
       ✅ Category & Brand Filtering
       ✅ Shopping Basket Management
@@ -45,14 +45,14 @@ This project goes beyond basic CRUD operations and implements enterprise-level b
       ✅ Centralized Exception Handling
       ✅ Specification-based Querying
       ✅ Scalable Modular Architecture
-⚡ Performance Optimization
+ Performance Optimization
 
      This project integrates Redis Caching to enhance performance by:
      ✅Reducing repetitive database queries
      ✅Improving frequently accessed endpoint response times
      ✅Supporting scalable distributed caching
      ✅Enhancing overall API throughput
-  📁 Project Structure
+   Project Structure
   
     E-Commerce/
     ├── 📂 API                     # Presentation Layer (Controllers, Middleware)
@@ -73,7 +73,7 @@ This project goes beyond basic CRUD operations and implements enterprise-level b
     ✅Protected API endpoints
     ✅Secure password handling
     ✅Token validation middleware
-📡 API Capabilities
+ API Capabilities
 Product Operations
 
     ✅Retrieve all products
@@ -98,7 +98,7 @@ Authentication
     ✅Secure login
     ✅Token generation
     ✅Protected resource access
-🎯 Backend Concepts Demonstrated
+ Backend Concepts Demonstrated
 This project showcases strong understanding of:
 
     ✅RESTful API Design
